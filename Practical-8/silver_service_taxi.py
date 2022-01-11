@@ -18,7 +18,7 @@ class SilverServiceTaxi(Taxi):
 
     def calculate_fare(self):  # 3
         """Get the current fare."""
-        return self.flagfall + super().calculate_fare()
+        return self.flagfall + super().get_fare() # Adds flagfall value to the method from 'taxi'
 
 
     def __str__(self):  # 4
