@@ -10,6 +10,13 @@ MENU = "q)uit, c)hoose taxi, d)rive"
 
 def main():
 
+    """Displays menu and get choice. Then let the user pick a taxi from the available ones.
+    Gets distance and simulates the driving with the chosen taxi.
+
+    Calculates fare for each trip and sums it gradually.
+
+    Show the statistics of the taxis and display total bill at the end"""
+
     total_bill = 0
     current_taxi = None
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
@@ -33,8 +40,8 @@ def main():
         elif menu_choice == "d":
             if current_taxi:
                 current_taxi.start_fare()
-                distance_to_drive = float(input("Drive how far? "))
-                current_taxi.drive(distance_to_drive)
+                trip_distance = float(input("Drive how far? "))
+                current_taxi.drive(trip_distance)
                 taxi_fare = current_taxi.get_fare()
                 print("Your {} trip cost you ${:.2f}".format(current_taxi.name, taxi_fare))
                 total_bill += taxi_fare
@@ -53,33 +60,12 @@ def main():
 
 
 def display_taxis(taxis):
-    """Display numbered list of taxis."""
+    """Display list of taxis with numbers."""
     for i, taxi in enumerate(taxis):
         print("{} - {}".format(i, taxi))
 
-def run_tests():
-    """Run tests to show workings of Car and Taxi classes."""
 
-    tesla = Car("Tesla", 200)
-    tesla.drive(30)
-    print("{}, fuel={}, odometer={}".format(tesla.name, tesla.fuel, tesla.odometer))
-
-    prius = Taxi("Prius 1", 100)
-    prius.drive(25)
-    print(prius, prius.get_fare())
-    prius.start_fare()
-    prius.drive(40)
-    print(prius, prius.get_fare())
-
-    limo = SilverServiceTaxi("Limo", 100, 2)
-    print(limo, limo.get_fare())
-    limo.drive(10)
-    print(limo, limo.get_fare())
-
-    hummer = SilverServiceTaxi("Limo", 200, 4)
-    print(hummer, hummer.get_fare())
-    hummer.drive(10)
-    print(hummer, hummer.get_fare())
 
 
 main()
+run_tests()
