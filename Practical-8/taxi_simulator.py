@@ -64,7 +64,29 @@ def display_taxis(taxis):
     for i, taxi in enumerate(taxis):
         print("{} - {}".format(i, taxi))
 
+def run_tests():
+    """Run tests to show workings of Car and Taxi classes."""
 
+    tesla = Car("Tesla", 200)
+    tesla.drive(30)
+    print("{}, fuel={}, odometer={}".format(tesla.name, tesla.fuel, tesla.odometer))
+
+    prius = Taxi("Prius 1", 100)
+    prius.drive(25)
+    print(prius, prius.get_fare())
+    prius.start_fare()
+    prius.drive(40)
+    print(prius, prius.get_fare())
+
+    limo = SilverServiceTaxi("Limo", 100, 2)
+    print(limo, limo.get_fare())
+    limo.drive(20)
+    print(limo, limo.get_fare())
+
+    hummer = SilverServiceTaxi("Limo", 200, 4)
+    print(hummer, hummer.get_fare())
+    hummer.drive(30)
+    print(hummer, hummer.get_fare())
 
 
 main()
