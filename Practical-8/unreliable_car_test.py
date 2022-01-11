@@ -7,7 +7,6 @@ from unreliable_car import  UnreliableCar
 
 def main():
     """Test some UnreliableCars."""
-
     # create cars with different reliabilities
     test_car = UnreliableCar("Hummer", 200, 50)
     print("{:7} drove {:2}km".format(test_car.name, test_car.drive(5)))
