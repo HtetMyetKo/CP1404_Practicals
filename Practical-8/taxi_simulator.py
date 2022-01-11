@@ -88,6 +88,5 @@ def run_tests():
     hummer.drive(30)
     print(hummer, hummer.get_fare())
 
-
 main()
 run_tests()
