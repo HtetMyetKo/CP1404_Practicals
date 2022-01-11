@@ -8,12 +8,12 @@ from unreliable_car import  UnreliableCar
 def main():
     """Test some UnreliableCars."""
     # create cars with different reliabilities
-    test_car = UnreliableCar("Hummer", 200, 50)
+    test_car = UnreliableCar("Hummer", 100, 50)
     print("{:7} drove {:2}km".format(test_car.name, test_car.drive(5)))
     print(test_car)
 
-    good_car = UnreliableCar("Strong", 200, 90)
-    bad_car = UnreliableCar("Dummy", 200, 10)
+    good_car = UnreliableCar("Strong", 100, 90)
+    bad_car = UnreliableCar("Dummy", 100, 10)
 
     # Simulates the distance driven and generates the results
 
