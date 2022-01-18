@@ -29,5 +29,4 @@ def main():
         os.rename(filename, "{}/{}".format(extension_to_category[extension], filename))
 
 
-
 main()
