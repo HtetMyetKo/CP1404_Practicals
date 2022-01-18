@@ -21,5 +21,13 @@ def main():
             # Get input and pair extensions to the directory names
             extension_to_category[extension] = category
 
+            try:
+                os.mkdir(category)
+            except FileExistsError:
+                pass
+
+        os.rename(filename, "{}/{}".format(extension_to_category[extension], filename))
+
+
 
 main()
