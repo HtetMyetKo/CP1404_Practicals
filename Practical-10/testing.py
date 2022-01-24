@@ -56,7 +56,7 @@ def run_tests():
     assert test_car.fuel == 0
 
 
-run_tests()
+
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
@@ -74,3 +74,33 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+
+def phrase_to_sentence(phrase):
+    """
+    Format a phrase as a sentence, starting with a capital and ending with a .
+    # >>> phrase_to_sentence('hello')
+    'Hello.'
+    # >>> phrase_to_sentence('It is an ex parrot.')
+    'It is an ex parrot.'
+    # >>> phrase_to_sentence('This subject rocks')
+    'This subject rocks.'
+    """
+    # start with a capital letter
+
+    # sentence = phrase.title()
+    sentence = phrase.capitalize()
+
+    # add the full stop in the end if there is no
+
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
+
+phrase_to_sentence('hello')
+phrase_to_sentence('It is an ex parrot.')
+phrase_to_sentence('This subject rocks')
+
+
+
+run_tests()
