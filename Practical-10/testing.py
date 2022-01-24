@@ -52,6 +52,9 @@ def run_tests():
     test_car = Car(fuel=10)
     assert test_car.fuel == 10
 
+    test_car = Car()
+    assert test_car.fuel == 0
+
 
 run_tests()
 
