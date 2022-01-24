@@ -7,12 +7,15 @@ import doctest
 from car import Car
 
 
+# TODO: 1. fix the repeat_string function above so that it passes the failing test
+# Hint: "-".join(["yo", "yo"] -> "yo-yo"
 def repeat_string(s, n):
     """Repeat string s, n times, with spaces in between."""
     return " ".join([s] * n)
-    # Hint: "-".join(["yo", "yo"] -> "yo-yo"
 
 
+# TODO: 4. Fix the failing is_long_word function
+# (don't change the tests, change the function!)
 def is_long_word(word, length=5):
     """
     Determine if the word is as long or longer than the length passed in
@@ -23,7 +26,7 @@ def is_long_word(word, length=5):
     >>> is_long_word("Python", 6)
     True
     """
-    return len(word) > length
+    return len(word) >= length
 
 
 def run_tests():
@@ -47,6 +50,7 @@ def run_tests():
     # using the value passed in or the default
     # You should test both of these
     test_car = Car(fuel=10)
+    assert test_car.fuel == 10
 
 
 run_tests()
