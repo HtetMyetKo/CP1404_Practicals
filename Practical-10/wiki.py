@@ -19,7 +19,6 @@ mercury = wikipedia.summary("Mercury")
 print(mercury)
 
 
-
 ny = wikipedia.page("New York")
 
 print(ny.title)
