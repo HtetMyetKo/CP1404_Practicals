@@ -15,7 +15,6 @@ def about():
     return render_template("about.html")
     # return "I am still working on this"
 
-
 @app.route('/search', methods=['POST', 'GET'])
 def search():
     if request.method == 'POST':
